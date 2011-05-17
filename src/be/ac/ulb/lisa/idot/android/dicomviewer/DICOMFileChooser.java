@@ -467,7 +467,7 @@ public class DICOMFileChooser extends ListActivity {
 					if (fileName.length > 1) {
 						
 						// DICOM files have no extension or dcm extension
-						if (fileName[fileName.length-1].equals("dcm")) {
+						if (fileName[fileName.length-1].equalsIgnoreCase("dcm")) {
 							
 							fileList.add(child.getName());
 							
@@ -491,8 +491,8 @@ public class DICOMFileChooser extends ListActivity {
 		}
 		
 		// Sort both list
-		Collections.sort(directoryList);
-		Collections.sort(fileList);
+		Collections.sort(directoryList, String.CASE_INSENSITIVE_ORDER);
+		Collections.sort(fileList, String.CASE_INSENSITIVE_ORDER);
 		// TODO Create a comparator to sort without the case sensitive
 		
 		// Set the number of dicom file

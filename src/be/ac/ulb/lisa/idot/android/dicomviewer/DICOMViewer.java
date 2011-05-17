@@ -735,6 +735,8 @@ public class DICOMViewer extends Activity implements SeekBar.OnSeekBarChangeList
     			mCLUTRainbowButton.setBackgroundResource(
     					R.drawable.clut_rainbow);
     			
+    			mDICOMViewerData.setCLUTMode(CLUTMode.INVERSE);
+    			
             	mGrayscaleWindow.updateCLUTMode();
             	
             	mImageView.draw();

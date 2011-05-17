@@ -78,7 +78,7 @@ public class DICOMFileFilter implements FileFilter {
 			// Check the file extension
 			String fileExtension = fileName.substring(dotIndex + 1);
 			
-			if (fileExtension.equals("dcm"))
+			if (fileExtension.equalsIgnoreCase("dcm"))
 				return true;
 			
 		}
